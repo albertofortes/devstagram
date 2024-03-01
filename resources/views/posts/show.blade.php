@@ -12,11 +12,12 @@
 <div class="flex container mx-auto">
   <div class="md:w-1/2 px-5">
     <img src="{{asset('uploads') . '/' . $post->image}}" alt="imagen del post {{$post->title}}" />
-    
-    <livewire:like-post />
+  
 
     <div class="flex gap-2 mt-3">
         @auth
+
+         <livewire:like-post />
 
           @if ( $post->checkLike(auth()->user() ))
             <form action="{{route('posts.likes.destroy', ['post' => $post])}}" method="POST">
