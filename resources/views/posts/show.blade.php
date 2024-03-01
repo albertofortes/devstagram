@@ -13,7 +13,7 @@
   <div class="md:w-1/2 px-5">
     <img src="{{asset('uploads') . '/' . $post->image}}" alt="imagen del post {{$post->title}}" />
     
-    <@livewire('like-post') />
+    <livewire:like-post />
 
     <div class="flex gap-2 mt-3">
         @auth
@@ -53,6 +53,7 @@
       @endif
     @endauth
   </div>
+
   <div class="md:w-1/2 px-5">
 
     @if (!$post->is_visible)
@@ -100,5 +101,6 @@
     @endif     
 
   </div>
+
 </div>
 @endsection

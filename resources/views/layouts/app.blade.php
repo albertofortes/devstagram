@@ -52,6 +52,7 @@
         @yield('content')
       </main>
 
+
       <footer class="uppercase text-gray-600 font-thin text-center p-5">@ {{now()->year}} lorem ipsum</footer>
     </body>
 </html>
